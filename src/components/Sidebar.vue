@@ -1,7 +1,7 @@
 <template>
   <aside :class="`${is_expanded && 'is-expanded' }`">
     <div class="logo">
-        <img src="../assets/logo.svg" alt="vue">
+        <img src="../img/photo2.png" alt="vue">
     </div>
 
     <div class="menu-toggle-wrap">
@@ -22,24 +22,37 @@
         <span class="material-symbols-outlined">history_edu</span>
         <span class="text">About</span>
       </router-link>
-      <router-link class="button" to="/">
-        <span class="material-symbols-outlined">home</span>
-        <span class="text">Home</span>
+      <router-link class="button" to="/projects">
+        <span class="material-symbols-outlined">work</span>
+        <span class="text">Projects</span>
       </router-link>
-      <!-- <router-link class="button"></router-link>
-      <router-link class="button"></router-link>
-      <router-link class="button"></router-link> -->
+      <router-link class="button" to="/contact">
+        <span class="material-symbols-outlined">share</span>
+        <span class="text">Contact</span>
+      </router-link>
     </div>
+
+    <div class="flex"></div>
+
+    <div class="menu">
+      <router-link class="button" to="/">
+        <span class="material-symbols-outlined">settings</span>
+        <span class="text">Settings</span>
+      </router-link>
+    </div>
+
   </aside>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-const is_expanded = ref(false)
+const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
 
 const ToggleMenu = () => {
   is_expanded.value = !is_expanded.value
+
+  localStorage.setItem("is_expanded", is_expanded.value)
 }
     
 </script>
@@ -59,11 +72,19 @@ const ToggleMenu = () => {
 
     transition: 0.2s ease-out;
 
+    .flex {
+      flex: 1 1 0;
+    }
     .logo {
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
-            width: 2rem;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
         }
     }
 
@@ -84,6 +105,10 @@ const ToggleMenu = () => {
           font-size: 2rem;
           color: var(--light);
         }
+        .router-link-exact-active{
+        background-color: var(--dark-alt);
+        border-right: 5px solid var(--primary);
+      }
 
         &:hover {
           .material-symbols-outlined {
@@ -98,11 +123,21 @@ const ToggleMenu = () => {
       opacity: 0;
       transition: 0.3s ease-out;
     }
+    &.router-link-exact-active{
+        background-color: var(--dark-alt);
+        border-right: 5px solid var(--primary);
+    }
 
     .menu {
       margin: 0 -1rem;
 
+      .material-symbols-outlined{
+        color: var(--light);
+        margin-left: 1rem;
+        font-size: 1.5rem;
+      }
     }
+
     &.is-expanded {
       width: var(--sidebar-width);
 
@@ -116,6 +151,13 @@ const ToggleMenu = () => {
         opacity: 1;
       } 
 
+      h3 {
+        color: var(--grey);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+ }
       .menu {
         margin: 0 -1rem;
 
@@ -124,7 +166,7 @@ const ToggleMenu = () => {
           align-items: center;
           text-decoration: none;
 
-          padding: 0.5rem 1rem;
+          padding: 0.5rem 0rem;
           transition: 0.2s ease-out;
 
           .material-symbols-outlined{
@@ -138,18 +180,22 @@ const ToggleMenu = () => {
             transition: 0.2s ease-out;
           }
 
-          &:hover {
+          &:hover, &.router-link-exact-active {
             background-color: var(--dark-alt);
 
             .material-symbols-outlined, .text {
               color: var(--primary);
             }
           }
+          &.router-link-exact-active{
+            border-right: 5px solid var(--primary);
+          }
+          
         }
       }
 
       
-    }
+   
 
     @media (max-width: 768) {
         position: fixed;
