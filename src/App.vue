@@ -5,9 +5,11 @@ import Sidebar from '../src/components/Sidebar.vue'
 <template>
   <div class="app">
     <!-- sidebar -->
-    <main></main>
-    <Sidebar />
-    <router-view />
+    <!-- <main> -->
+      <Sidebar />
+    <!-- </main> -->
+      <router-view />
+    
   </div>
 </template>
 
@@ -29,8 +31,9 @@ import Sidebar from '../src/components/Sidebar.vue'
 }
 
 body {
-  background-color: var(--light)
+  background-color: var(--light);
 }
+
 button{
   cursor: pointer;
   appearance: none;
