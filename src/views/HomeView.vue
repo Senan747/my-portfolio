@@ -8,12 +8,13 @@ const showP = ref(false)
 <template>
     <main class="home-page">
         <div class="slider">
-            <span style="--i:1;"><div><h1>hello skalfjsaf</h1> </div></span>
-            <span style="--i:1;"><div>AFKJLKDJLFKFKLJADS</div></span>
-            <span style="--i:1;"><div>hello skalfjsaf</div></span>
-            <span style="--i:1;"><div>hello skalfjsaf</div></span>
-            <span style="--i:1;"><div>hello skalfjsaf</div></span>
-            <span style="--i:1;"><div>hello skalfjsaf</div></span>
+            <span style="--i:1;"><img src="../img/hello (5).png" alt=""></span>
+            <span style="--i:2;"><img src="../img/photo.jpeg" alt=""></span>
+            <span style="--i:3;"><img src="../img/hello (4).png" alt=""></span>
+            <span style="--i:4;"><img src="../img/hello (1).png" alt=""></span>
+            <span style="--i:5;"><img src="../img/me.jpeg" alt=""></span>
+            <span style="--i:6;"><img src="../img/hello (2).png" alt=""></span>
+
         </div>
     </main>
 </template>
@@ -26,7 +27,8 @@ const showP = ref(false)
 }
 
 .home-page {
-    background-color: linear-gradient(to right, #2c5364, #0f2027);
+    /* background-color: aqua; */
+    background-color:#2c5364;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -57,18 +59,21 @@ const showP = ref(false)
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+    transform: rotateY(calc(var(--i)*55deg)) translateZ(350px);
 }
 
-.slider span div {
+.slider span img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 100px;
     object-fit: cover;
+    border-radius: 25px;
     transition: 2s;
+}
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
 }
 .fade-enter-from {
     opacity: 0;

@@ -47,6 +47,7 @@
 <script setup>
 import { ref } from 'vue'
 
+
 const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
 
 const ToggleMenu = () => {
@@ -200,6 +201,14 @@ const ToggleMenu = () => {
     @media (max-width: 768) {
         position: fixed;
         z-index: 99;
+
+        
     }
+  }
+
+  @media (max-width: 768px){
+    .menu-toggle-wrap {
+          display: none;
+        }
   }
 </style>
