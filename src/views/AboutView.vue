@@ -44,7 +44,9 @@ function typing() {
           {{ component.name }}
         </button>
       </div>
-      <component :is="activeComponent" v-if="activeComponent" />
+      <div class="container">
+        <component :is="activeComponent" v-if="activeComponent" />
+      </div>
     </div>
   </transition>
 </template>
@@ -63,6 +65,11 @@ h1{
     align-items: center;
     flex-wrap: wrap;
 }
+.container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 button{
     width: auto;
     font-size: 20px;
@@ -73,7 +80,30 @@ button{
     border-radius: 15px;
     justify-content: center;
     cursor: pointer;
+    position:relative;
+    transition: color 0.4s linear;
 }
+button:hover {
+  color: white;
+}
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #1b1d1f;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+}
+button::before:hover {
+  transform: scaleX(1);
+}
+
 
 .about-enter-from {
   opacity: 0;
