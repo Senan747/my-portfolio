@@ -100,7 +100,7 @@ button::before {
   transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
   transform: scaleX(0);
 }
-button::before:hover {
+button:hover::before {
   transform: scaleX(1);
 }
 
