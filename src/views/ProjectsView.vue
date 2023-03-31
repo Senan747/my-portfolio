@@ -1,6 +1,15 @@
 <script setup>
    import { ref } from 'vue'
    import Slide from '../components/Slide.vue'
+
+   const slideNumber = ref(0)
+
+   function back() {
+    slideNumber.value--
+   }
+   function next() {
+    slideNumber.value++
+   }
 </script>
 
 <template>
@@ -8,15 +17,15 @@
         <h1>MY PROJECTS</h1>
     </div>
     <div class="container">
-        <div class="button">
+        <div class="button" @click="back">
             <span class="material-symbols-outlined">
                arrow_back_ios
             </span>
         </div>
         <div class="slide">
-            <Slide />
+            <Slide :slideNumber="slideNumber" />
         </div>
-        <div class="button">
+        <div class="button" @click="next">
             <span class="material-symbols-outlined">
                 arrow_forward_ios
             </span>
@@ -35,11 +44,12 @@ h1{
 
 }
 .slide {
-    border: 1px solid red;
+    border-radius: 20px;
     width: 800px;
     height: 600px;
 }
 .button {
     border: 50%;
+    cursor: pointer;
 }
 </style>
