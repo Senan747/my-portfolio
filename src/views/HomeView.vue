@@ -8,12 +8,12 @@ const showP = ref(false)
 <template>
     <main class="home-page">
         <div class="slider">
-            <span style="--i:1;"><img src="../img/hello (5).png" alt=""></span>
+            <span style="--i:1;"><img src="../img/hello(5).png" alt=""></span>
             <span style="--i:2;"><img src="../img/photo.jpeg" alt=""></span>
-            <span style="--i:3;"><img src="../img/hello (4).png" alt=""></span>
-            <span style="--i:4;"><img src="../img/hello (1).png" alt=""></span>
+            <span style="--i:3;"><img src="../img/hello(4).png" alt=""></span>
+            <span style="--i:4;"><img src="../img/hello(1).png" alt=""></span>
             <span style="--i:5;"><img src="../img/me.jpeg" alt=""></span>
-            <span style="--i:6;"><img src="../img/hello (2).png" alt=""></span>
+            <span style="--i:6;"><img src="../img/hello(2).png" alt=""></span>
 
         </div>
     </main>
