@@ -18,22 +18,24 @@ const data = [
     {
         name: 'Image Editor App',
         lang: [
-          ['React', '60.2%'],
-          ['CSS', '30.1%'],
-          ['JS', '9.7%']
+          ['JS', '49.9%'],
+          ['CSS', '25.4%'],
+          ['HTML', '24.7%']
         ],
         link: 'https://senan-dev-image-editor.netlify.app/',
-        linkGithub: 'https://github.com/Senan747/developed-image-editor-v2.0-'
+        linkGithub: 'https://github.com/Senan747/developed-image-editor-v2.0-',
+        img: '../src/img/image-editor4.jpg'
   },
   {
         name: 'Paint App',
         lang: [
-          ['Angular', '50.0%'],
-          ['CSS', '40.0%'],
-          ['JS', '10.0%']
+          ['JS', '45.9%'],
+          ['CSS', '25.1%'],
+          ['HTML', '29%']
         ],
         link: 'https://senan-paint-js.netlify.app/',
-        linkGithub: 'https://github.com/Senan747/paint-js'
+        linkGithub: 'https://github.com/Senan747/paint-js',
+        img: '../src/img/paint3.jpeg'
   }
     
 ]
@@ -53,14 +55,13 @@ const data = [
       </div>
       <div class="touch">
         <div class="git">
-          <img src="../img/github.png" alt="">
-           <a :href="data[slideNumber].link">Link</a> 
+           <img src="../img/link.png" alt="">
+           <a :href="data[slideNumber].link" target="_blank">Link</a> 
         </div>
         <div class="link">
-          <img src="../img/link.png" alt="">
-          <a :href="data[slideNumber].linkGithub">Github</a>
+          <img src="../img/github.png" alt="">
+          <a :href="data[slideNumber].linkGithub" target="_blank">Github</a>
         </div>
-     
       </div>
       
     </div>
@@ -74,18 +75,19 @@ const data = [
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: cover;
-  background-size: auto
+  background-size: cover;
+
 }
 
 .info{
   width: 100%;
+  height: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  align-content: space-around;
+  
 }
 .center {
   display: flex;
@@ -113,8 +115,8 @@ li{
   background-color: #fff;
   border: 5px solid #334155;
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   align-items: center;
   justify-content: center;
   font-size: 18px;
@@ -123,11 +125,13 @@ li{
 a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 600;
 }
 .touch img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
 }
 .link, .git{
   display: flex;

@@ -13,27 +13,35 @@
 </script>
 
 <template>
-    <div>
-        <h1>MY PROJECTS</h1>
+    <div class="total">
+        <div class="flex">
+            <h1>MY PROJECTS</h1>
+        </div>
+        <div class="container">
+            <div class="button" @click="back" v-show="slideNumber > 0">
+                <span class="material-symbols-outlined" >
+                arrow_back_ios
+                </span>
+            </div>
+            <div class="slide">
+                <Slide :slideNumber="slideNumber" />
+            </div>
+            <div class="button" @click="next" v-show="slideNumber < 2">
+                <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                </span>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <div class="button" @click="back">
-            <span class="material-symbols-outlined">
-               arrow_back_ios
-            </span>
-        </div>
-        <div class="slide">
-            <Slide :slideNumber="slideNumber" />
-        </div>
-        <div class="button" @click="next">
-            <span class="material-symbols-outlined">
-                arrow_forward_ios
-            </span>
-        </div>
-    </div>
-  
 </template>
 <style scoped>
+.total {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 h1{
     font-size: 50px;
     text-align: center;
@@ -49,7 +57,14 @@ h1{
     height: 600px;
 }
 .button {
-    border: 50%;
+    border-radius: 100%;
     cursor: pointer;
+    background-color: #1E293B;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+}
+.button span {
+    color: white;
 }
 </style>
