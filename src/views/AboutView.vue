@@ -51,9 +51,12 @@ function typing() {
   </transition>
 </template>
 
-<style>
+<style scoped>
 .about-page {
+    padding: 50px;
     background-color: #f0dae5;
+    min-height: 100vh;
+    min-width: 100%;
 }
 h1{
     text-align: center;
@@ -69,6 +72,7 @@ h1{
   display:flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 button{
     width: auto;

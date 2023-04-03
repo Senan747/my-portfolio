@@ -34,13 +34,6 @@
 
     <div class="flex"></div>
 
-    <div class="menu">
-      <router-link class="button" to="/">
-        <span class="material-symbols-outlined">settings</span>
-        <span class="text">Settings</span>
-      </router-link>
-    </div>
-
   </aside>
 </template>
 
@@ -198,7 +191,7 @@ const ToggleMenu = () => {
       
    
 
-    @media (max-width: 768) {
+    @media (max-width: 768px) {
         position: fixed;
         z-index: 99;
 
@@ -207,7 +200,7 @@ const ToggleMenu = () => {
   }
 
   @media (max-width: 768px){
-    .menu-toggle-wrap {
+    .menu-toggle{
           display: none;
         }
   }

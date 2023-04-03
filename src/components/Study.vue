@@ -12,6 +12,7 @@ div{
     font-size: 20px;
     border-radius: 30px;
     background: #6A7B8B;
+    color: white;
     padding: 15px;
 }
 </style>

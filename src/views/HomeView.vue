@@ -94,4 +94,11 @@ const showP = ref(false)
 .fade-leave-active {
     transition: all 2s ease;
 }
+
+@media (max-width: 768px){
+    .slider {
+        width: 150px;
+        height: 150px;
+    }
+}
 </style>

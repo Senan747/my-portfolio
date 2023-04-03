@@ -49,7 +49,7 @@ h1{
 .container {
     display: flex;
     flex-direction: row;
-
+    align-items: center;
 }
 .slide {
     border-radius: 20px;
@@ -63,6 +63,7 @@ h1{
     display: flex;
     padding: 5px;
     margin: 5px;
+    user-select: none;
 }
 .button span {
     color: white;

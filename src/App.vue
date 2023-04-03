@@ -8,12 +8,13 @@ import Sidebar from '../src/components/Sidebar.vue'
     <!-- <main> -->
       <Sidebar />
     <!-- </main> -->
+    <main>
       <router-view v-slot="{ Component }" >
         <transition name="route" mode="out-in">
             <component :is="Component"></component>
         </transition>
       </router-view>
-    
+    </main>
   </div>
 </template>
 
@@ -47,10 +48,10 @@ button{
 
   main {
     flex: 1 1 0;
-    padding: 2rem;
+    
 
     @media (max-width: 768px){
-      padding-left: 6rem;
+    
     }
   }
 }
