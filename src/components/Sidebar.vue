@@ -124,6 +124,7 @@ const ToggleMenu = () => {
 
     .menu {
       margin: 0 -1rem;
+      
 
       .material-symbols-outlined{
         color: var(--light);
