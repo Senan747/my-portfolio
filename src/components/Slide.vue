@@ -69,9 +69,9 @@ const data = [
 </template>
 <style scoped>
 .total{
-  width: 800px;
+  max-width: 800px;
   border-radius: 20px;
-  height: 600px;
+  max-height: 600px;
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -139,5 +139,12 @@ a {
   align-items: center;
   justify-content: flex-start;
   width: 100px;
+}
+
+@media (max-width: 768px){
+  .total{
+    max-width: 400px;
+    max-height: 300px;
+  }
 }
 </style>

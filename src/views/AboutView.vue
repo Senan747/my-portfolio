@@ -126,7 +126,7 @@ button:hover::before {
     height: auto;
     background-color: #a5b6c7;
     padding: 10px 5px;
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 10px;
 
   }
@@ -139,7 +139,7 @@ button:hover::before {
   align-items: center;
   flex-wrap: wrap;
   max-width: 400px;
-  margin-left: 50px;
+  margin-left: 28px;
 }
   
 }

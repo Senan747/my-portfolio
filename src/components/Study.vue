@@ -15,4 +15,9 @@ div{
     color: white;
     padding: 15px;
 }
+@media (max-width: 768px){
+    div{
+        font-size: 15px;
+    }
+}
 </style>

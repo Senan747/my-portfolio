@@ -68,4 +68,9 @@ h1{
 .button span {
     color: white;
 }
+@media (max-width: 768px){
+    .slide{
+        
+    }
+}
 </style>

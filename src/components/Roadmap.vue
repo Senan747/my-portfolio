@@ -21,12 +21,12 @@
     border-radius: 30px;
     background: #6A7B8B;
     padding: 30px;
-    width: 400px;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    color: rgb(0, 4, 7);
 }
 div {
     padding: 4px 5px;
@@ -34,7 +34,6 @@ div {
 }
 .lang{
     text-align: center;
-    border-radius: 5px;
     font-weight: bold;
 }
 p{
@@ -54,5 +53,13 @@ p{
 }
 .road-enter-active {
     transition: all 0.7s ease-in-out;
+}
+@media (max-width: 768px){
+    .total {
+        font-size: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 300px;
+    }
 }
 </style>
