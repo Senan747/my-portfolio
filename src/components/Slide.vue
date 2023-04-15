@@ -69,9 +69,9 @@ const data = [
 </template>
 <style scoped>
 .total{
-  max-width: 800px;
+  width: 800px;
   border-radius: 20px;
-  max-height: 600px;
+  height: 600px;
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -141,10 +141,61 @@ a {
   width: 100px;
 }
 
+@media (max-width: 1273px){
+  .total{
+    width: 400px;
+    height: 300px;
+  }
+}
 @media (max-width: 768px){
   .total{
-    max-width: 400px;
-    max-height: 300px;
+    width: 300px;
+    height: 400px;
   }
+
+
+h1{
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+}
+ul{
+  
+  width: 250px;
+  justify-content: space-around;
+  list-style: none;
+}
+li{
+  display: flex;
+  color: #334155;
+  background-color: #fff;
+  border: 5px solid #334155;
+  border-radius: 100%;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+.touch img {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+}
+.link, .git{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+}
 }
 </style>

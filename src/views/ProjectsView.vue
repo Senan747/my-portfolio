@@ -68,9 +68,42 @@ h1{
 .button span {
     color: white;
 }
-@media (max-width: 768px){
+@media (max-width: 1273px){
     .slide{
-        
+        width: 600px;
+        height: 5000px;
     }
+}
+@media (max-width: 768px){
+    .flex{
+        margin-bottom: 100px;
+    }
+    .slide{
+        width: 300px;
+        height: 400px;
+    }
+    h1{
+    font-size: 25px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slide {
+    border-radius: 10px;
+   
+}
+.button {
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #1E293B;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    user-select: none;
+}
 }
 </style>

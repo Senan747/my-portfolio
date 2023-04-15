@@ -131,4 +131,37 @@ img {
 a {
     text-decoration: none;
 }
+
+@media (max-width: 768px){
+    .total{
+        flex-direction: column;
+    }
+    ul {
+    max-width: 200px;
+    max-height: 800px;
+    border: 1px solid grey; 
+    flex-wrap: wrap;    
+}
+.form {
+    padding: 25px 75px;
+
+}
+
+
+input, textarea {
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    display: block;
+}
+img{
+   width: 25px;
+   height:25px;
+   margin-bottom: 10px;
+}
+.material-symbols-outlined{
+    font-size: 25px;
+}
+}
+
 </style>
